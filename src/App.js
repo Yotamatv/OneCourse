@@ -4,15 +4,15 @@ import Layout from "./layout/Layout";
 import Pricing from "./Pages/Pricing";
 import Home from "./Pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <React.Fragment>
       <Layout>
         <Home />
         <Pricing />
       </Layout>
-    </>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

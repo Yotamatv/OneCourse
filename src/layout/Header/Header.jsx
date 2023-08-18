@@ -1,6 +1,7 @@
 import { Box, Toolbar, Button } from "@mui/material";
 import React from "react";
 import Logo from "./Logo";
+import "./Header.scss";
 
 export default function Header() {
   return (
@@ -8,7 +9,9 @@ export default function Header() {
       <Toolbar className="spaceBetween">
         <Logo />
         <Box>
-          <Button id="pricingButton">Pricing</Button>
+          <Button id="pricingButton" sx={{}}>
+            Pricing
+          </Button>
           <Button variant="contained" className="sign_up">
             Sign Up
           </Button>

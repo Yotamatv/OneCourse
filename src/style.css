@@ -143,7 +143,7 @@ p {
 }
 .logo {
   height: 8px;
-  left: 55px;
+  left: 120px;
   position: relative;
   top: 45px;
   width: 32px;
@@ -218,4 +218,8 @@ p {
   font-size: 16px;
   height: 47.85px;
   margin-left: 12%;
+}
+
+.logo-container {
+  gap: 5px;
 }
