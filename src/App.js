@@ -1,4 +1,4 @@
-import "./App.css";
+import "./style.css";
 import React from "react";
 import Layout from "./layout/Layout";
 import Pricing from "./Pages/Pricing";
