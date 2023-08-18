@@ -9,7 +9,6 @@ const App = () => {
     <React.Fragment>
       <Layout>
         <Home />
-        <Pricing />
       </Layout>
     </React.Fragment>
   );
