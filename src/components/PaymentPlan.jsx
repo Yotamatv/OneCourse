@@ -21,8 +21,8 @@ export default function PaymentPlan({
       <Divider variant="middle" />
       <ul className="checklist">
         {benefits &&
-          benefits.map((benefit) => (
-            <div>
+          benefits.map((benefit, index) => (
+            <div key={index}>
               <img
                 src="\images\checkmark.png"
                 alt="checkmark"
