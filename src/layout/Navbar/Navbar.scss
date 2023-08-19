@@ -1,0 +1,140 @@
+@import "../../style/variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .title {
+    display: flex;
+    margin-left: 0;
+
+    .center-dots {
+      display: flex;
+      align-items: center;
+      margin-right: 1.5px;
+
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin: 0 1.5px;
+      }
+
+      .dot-1 {
+        background-color: #293fcc;
+      }
+      .dot-2 {
+        background-color: rgba($dot-color, 0.69);
+      }
+      .dot-3 {
+        background-color: rgba($dot-color, 0.41);
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: $text-color;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      flex: 1; /* Occupy remaining space to push .center-dots to the left */
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      border: none;
+      font-size: $font-size;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 6px;
+      width: 100px;
+    }
+
+    .signup-btn {
+      background-color: $btn-primary-color;
+      color: white;
+      &:hover {
+        background-color: #9ca9ff;
+        color: $text-color;
+      }
+    }
+
+    .pricing-btn {
+      background-color: transparent;
+      color: $text-color;
+      &:hover {
+        background-color: $btn-primary-color;
+        color: white;
+      }
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 50px;
+
+    .bar {
+      background-color: $text-color;
+      height: 2px;
+      display: block;
+      width: 50px;
+      transition-timing-function: ease-in-out;
+      transition-duration: 300ms;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 72px;
+    animation: slideInFromRight 300ms ease-in-out;
+    width: 100%;
+    height: calc(100vh - 72px);
+    right: 0;
+    z-index: 10;
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  // Media Query for Responsive Layout
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+
+    .buttons {
+      background-color: aliceblue;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: self-start;
+      margin-top: 2rem;
+      height: 120px;
+      width: 80%;
+      button {
+        width: 80%;
+      }
+    }
+  }
+}
